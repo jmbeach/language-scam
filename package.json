@@ -1,0 +1,8 @@
+{
+	"name": "language-scam",
+	"version": "0.0.1",
+	"description": "Syntax highlighting for Scam",
+	"engines": {
+		"atom": "*"
+	}
+}

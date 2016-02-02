@@ -1,0 +1,25 @@
+'scopeName': 'source.scam'
+'name': 'SCAM'
+'fileTypes': ['SCM']
+'patterns': [
+  {
+    'match': '\\b(define|println|if|true)\\b'
+    'name': 'keyword'
+  },
+  {
+    'match': '(\\(|\\))'
+    'name': 'entity.name.tag'
+  },
+  {
+    'match': '(\\".*\\")'
+    'name': 'string'
+  },
+  {
+    'match': '(?<=define \\()(\\w|\\d|[-])*'
+    'name': 'support.function'
+  },
+  {
+    'match': '((;@).*)'
+    'name': 'comment'
+  }
+]
