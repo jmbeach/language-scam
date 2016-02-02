@@ -1,7 +1,13 @@
 {
 	"name": "language-scam",
-	"version": "0.0.1",
+	"version": "1.0.0",
+	"keywords": [
+    "language",
+    "grammar"
+  ],
 	"description": "Syntax highlighting for Scam",
+	"repository": "https://github.com/jmbeach/language-scam",
+	"license": "MIT",
 	"engines": {
 		"atom": "*"
 	}
