@@ -3,8 +3,16 @@
 'fileTypes': ['SCM']
 'patterns': [
   {
-    'match': '\\b(define|println|if|true)\\b'
+    'match': '\\b(println|true\\?) '
     'name': 'keyword'
+  },
+  {
+    'match': '\\b(if)'
+    'name': 'keyword.control'
+  },
+  {
+    'match': '\\b(define|(set\!))'
+    'name': 'storage'
   },
   {
     'match': '(\\(|\\))'
@@ -15,11 +23,25 @@
     'name': 'string'
   },
   {
-    'match': '(?<=define \\()(\\w|\\d|[-])*'
-    'name': 'support.function'
+    'match':'(?<=define \\()(\\w|\\d|[-])*'
+    'name':'entity.name.function'
+  }
+  {
+    'begin': '(?<=define \\()(\\w|\\d|[-])*'
+    'end': '\\)'
+    'patterns':[
+      {
+        'name':'variable.parameter'
+        'match': '[a-zA-Z0-9?#]+'
+      }
+    ]
   },
   {
     'match': '((;@).*)'
     'name': 'comment'
+  },
+  {
+    'match': '(?<=\\()[+]'
+    'name': 'keyword.operator'
   }
 ]
