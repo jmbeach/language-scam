@@ -1,4 +1,4 @@
-# PackageName language package
+# SCAM Language For Atom
 
 Basic syntax highlighting for SCAM language
 <div>
