@@ -3,15 +3,15 @@
 'fileTypes': ['SCM']
 'patterns': [
   {
-    'match': '\\b(println|true\\?) '
-    'name': 'keyword'
+    'match': '\\b(println|true\\?|error\\?|print|inspect|length) '
+    'name': 'support.function'
   },
   {
-    'match': '\\b(if)'
+    'match': '(?<=\\()(if|and|or|\\<|\\||\\=|\\=\\=|\\<\\=) '
     'name': 'keyword.control'
   },
   {
-    'match': '\\b(define|(set\!))'
+    'match': '\\b(define|(set\!)|list)'
     'name': 'storage'
   },
   {
@@ -41,7 +41,17 @@
     'name': 'comment'
   },
   {
-    'match': '(?<=\\()[+]'
-    'name': 'keyword.operator'
+    'begin': '(;{).*'
+    'end': ';}'
+    'name':'comment.block'
+  },
+  {
+    'match': '(?<=\\()[\\+\\-\\*]'
+    'name': 'keyword.operator.scam'
+  },
+  {
+    'comment bad operation'
+    'match': '(\\w|\\d|[\\$\\#])+ [\\+|\\-|\\*] (\\w|\\d|[\\$\\#])+'
+    'name': 'invalid.illegal'
   }
 ]
