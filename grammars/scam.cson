@@ -3,11 +3,11 @@
 'fileTypes': ['SCM']
 'patterns': [
   {
-    'match': '\\b(println|true\\?|error\\?|print|inspect|length) '
+    'match': '\\b(println|true\\?|error\\?|print|inspect|length|string\\+|abs)[ |\\n]'
     'name': 'support.function'
   },
   {
-    'match': '(?<=\\()(if|and|or|\\<|\\||\\=|\\=\\=|\\<\\=) '
+    'match': '(?<=\\()(if|and|or|\\<|\\||\\=|\\=\\=|\\<\\=|for|for\\-each|while|catch|cond) '
     'name': 'keyword.control'
   },
   {
@@ -51,7 +51,7 @@
   },
   {
     'comment bad operation'
-    'match': '(\\w|\\d|[\\$\\#])+ [\\+|\\-|\\*] (\\w|\\d|[\\$\\#])+'
+    'match': '(\\w|\\d|[\\$\\#])+ [\\+|\\-|\\*|\\=|\\<|\\>] (\\w|\\d|[\\$\\#])+'
     'name': 'invalid.illegal'
   }
 ]
