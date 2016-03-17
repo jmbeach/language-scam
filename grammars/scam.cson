@@ -3,11 +3,11 @@
 'fileTypes': ['SCM']
 'patterns': [
   {
-    'match': '\\b(println|true\\?|error\\?|print|inspect|length|string\\+|abs)[ |\\n]'
+    'match': '\\b(println|true\\?|error\\?|print|inspect|length|string\\+|abs|null\\?|eq\\?|sqrt|reverse|is\\?|level\\?|ppTable)[ |\\n]?'
     'name': 'support.function'
   },
   {
-    'match': '(?<=\\()(if|and|or|\\<|\\||\\=|\\=\\=|\\<\\=|for|for\\-each|while|catch|cond) '
+    'match': '(?<=\\()(if|and|or|\\<|\\||\\=|\\=\\=|\\<\\=|for|for\\-each|while|catch|cond|else)[ \\n]'
     'name': 'keyword.control'
   },
   {
@@ -15,7 +15,7 @@
     'name': 'storage'
   },
   {
-    'match': '(\\(|\\))'
+    'match': '(\\(|\\))|(\\\'\\w*)'
     'name': 'entity.name.tag'
   },
   {
@@ -23,7 +23,7 @@
     'name': 'string'
   },
   {
-    'match':'(?<=define \\()(\\w|\\d|[-])*'
+    'match':'(?<=define \\()(\\w|\\d|[-*>])*'
     'name':'entity.name.function'
   }
   {
@@ -53,5 +53,17 @@
     'comment bad operation'
     'match': '(\\w|\\d|[\\$\\#])+ [\\+|\\-|\\*|\\=|\\<|\\>] (\\w|\\d|[\\$\\#])+'
     'name': 'invalid.illegal'
+  },
+  {
+    'match': '(?<=\\()\\w(\\w|\\d|[->*])*[ ]?'
+    'name': 'entity.name.function'
+  },
+  {
+    'match': '\\d+'
+    'name': 'constant.numeric'
+  },
+  {
+    'match':'\\bnil'
+    'name':'keyword'
   }
 ]
