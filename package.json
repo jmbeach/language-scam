@@ -3,9 +3,12 @@
   "version": "0.0.10",
   "keywords": [
     "language",
-    "grammar"
+    "grammar",
+    "scheme",
+    "lisp",
+    "scam"
   ],
-  "description": "Syntax highlighting for Scam",
+  "description": "Syntax highlighting for Scam (a Scheme-like language)",
   "repository": "https://github.com/jmbeach/language-scam",
   "license": "MIT",
   "engines": {

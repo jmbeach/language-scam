@@ -10,4 +10,13 @@
     'body': 'if (${1:#t}) \n\t$2 \n\t$3 \n'
   'cond':
     'prefix': 'cond'
-    'body': 'cond \n\t((${1:#t}) \n\t\t$2 \n\t) \n\t(else \n\t$3 \n\t)'
+    'body': 'cond \n\t((${1:#t}) \n\t\t$2 \n\t) \n\t(else \n\t\t$3 \n\t)\n'
+  'lambda':
+    'prefix': 'lambda'
+    'body': 'lambda (${1:params}) \n\t${2:body}\n'
+  'lambda execute':
+    'prefix': '((lambda'
+    'body': '(lambda (${1:params}) \n\t${2:body}\n)'
+  'define':
+    'prefix': 'define'
+    'body': 'define ${1:name} ${2:value}'

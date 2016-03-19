@@ -3,7 +3,7 @@
 'fileTypes': ['SCM']
 'patterns': [
   {
-    'match': '\\b(println|true\\?|error\\?|print|inspect|length|string\\+|abs|null\\?|eq\\?|sqrt|reverse|is\\?|level\\?|ppTable)[ |\\n]?'
+    'match': '\\b(println|true\\?|error\\?|print|inspect|length|string\\+|abs|null\\?|eq\\?|sqrt|reverse|is\\?|level\\?|ppTable|lambda)[ |\\n]?'
     'name': 'support.function'
   },
   {
@@ -15,7 +15,7 @@
     'name': 'storage'
   },
   {
-    'match': '(\\(|\\))|(\\\'\\w*)'
+    'match': '[\\(\\)]|(\\\'\\w*)'
     'name': 'entity.name.tag'
   },
   {
@@ -25,9 +25,20 @@
   {
     'match':'(?<=define \\()(\\w|\\d|[-*>])*'
     'name':'entity.name.function'
-  }
+  },
   {
-    'begin': '(?<=define \\()(\\w|\\d|[-])*'
+    # looks for "define ("
+    'begin': 'define \\((\\w|\\d|[-])*'
+    'end': '\\)'
+    'patterns':[
+      {
+        'name':'variable.parameter'
+        'match': '[a-zA-Z0-9?#]+'
+      }
+    ]
+  },
+  {
+    'begin': 'lambda[ ]?\\('
     'end': '\\)'
     'patterns':[
       {
@@ -55,7 +66,7 @@
     'name': 'invalid.illegal'
   },
   {
-    'match': '(?<=\\()\\w(\\w|\\d|[->*])*[ ]?'
+    'match': '(?<!lambda \\()(?<!lambda\\()(?<=\\()\\w(\\w|\\d|[->*?#!])*[ ]?'
     'name': 'entity.name.function'
   },
   {
