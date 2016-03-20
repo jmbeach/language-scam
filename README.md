@@ -8,7 +8,7 @@ Basic syntax highlighting and snippets for SCAM language
 * Define
 ![define example](https://raw.githubusercontent.com/jmbeach/language-scam/master/images/define-example-small.gif)
 * Lambda
-![lambda example](https://github.com/jmbeach/language-scam/blob/master/images/lambda-example.gif?raw=true)
+![lambda example](https://raw.githubusercontent.com/jmbeach/language-scam/master/images/lambda-example-small.gif)
 
 ## Goals
 * become better than basic
