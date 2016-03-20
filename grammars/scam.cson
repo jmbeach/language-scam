@@ -67,7 +67,7 @@
   },
   {
     'match': '(?<!lambda \\()(?<!lambda\\()(?<=\\()\\w(\\w|\\d|[\\->*?#!])*[ ]?'
-    'name': 'meta.method-call'
+    'name': 'entity.name.function'
   },
   {
     'match': '\\d+'
