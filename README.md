@@ -4,9 +4,9 @@ Basic syntax highlighting and snippets for SCAM language
 
 ## Example Snippet Usage
 * Cond
-![cond example](https://github.com/jmbeach/language-scam/blob/master/images/cond-example.gif?raw=true)
+![cond example](https://raw.githubusercontent.com/jmbeach/language-scam/master/images/cond-example-small.gif)
 * Define
-![define example](https://github.com/jmbeach/language-scam/blob/master/images/define-example.gif?raw=true)
+![define example](https://raw.githubusercontent.com/jmbeach/language-scam/master/images/define-example-small.gif)
 * Lambda
 ![lambda example](https://github.com/jmbeach/language-scam/blob/master/images/lambda-example.gif?raw=true)
 

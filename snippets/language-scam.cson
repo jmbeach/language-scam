@@ -19,4 +19,4 @@
     'body': '(lambda (${1:params}) \n\t${2:body}\n)'
   'define':
     'prefix': 'define'
-    'body': 'define ${1:name} ${2:value}'
+    'body': 'define ${1:name} \n\t${2:value}\n'
