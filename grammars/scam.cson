@@ -11,7 +11,7 @@
     'name': 'keyword.control'
   },
   {
-    'match': '\\b(define|(set\!)|list)'
+    'match': '\\b(define|(set\!)|list)(?!\\-)'
     'name': 'storage'
   },
   {
@@ -23,12 +23,12 @@
     'name': 'string'
   },
   {
-    'match':'(?<=define \\()(\\w|\\d|[-*>])*'
+    'match':'(?<=define \\()(\\w|\\d|[\\-*>?])*'
     'name':'entity.name.function'
   },
   {
     # looks for "define ("
-    'begin': 'define \\((\\w|\\d|[-])*'
+    'begin': 'define \\((\\w|\\d|[\\-])*'
     'end': '\\)'
     'patterns':[
       {
@@ -58,7 +58,7 @@
   },
   {
     'match': '(?<=\\()[\\+\\-\\*]'
-    'name': 'keyword.operator.scam'
+    'name': 'keyword.operator'
   },
   {
     'comment bad operation'
@@ -66,8 +66,8 @@
     'name': 'invalid.illegal'
   },
   {
-    'match': '(?<!lambda \\()(?<!lambda\\()(?<=\\()\\w(\\w|\\d|[->*?#!])*[ ]?'
-    'name': 'entity.name.function'
+    'match': '(?<!lambda \\()(?<!lambda\\()(?<=\\()\\w(\\w|\\d|[\\->*?#!])*[ ]?'
+    'name': 'meta.method-call'
   },
   {
     'match': '\\d+'
