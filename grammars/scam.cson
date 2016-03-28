@@ -3,7 +3,7 @@
 'fileTypes': ['SCM']
 'patterns': [
   {
-    'match': '\\b(println|true\\?|error\\?|print|inspect|length|string\\+|abs|null\\?|eq\\?|sqrt|reverse|is\\?|level\\?|ppTable|lambda|member\\?|cadr|car|cons|caar|caddr|cdr|type)[ |\\n]?'
+    'match': '\\b(println|true\\?|error\\?|print|inspect|length|string\\+|abs|null\\?|eq\\?|sqrt|reverse|is\\?|level\\?|ppTable|lambda|member\\?|cadr|car|cons|caar|caddr|cdr|type|apply|map|get)[ |\\n]?'
     'name': 'support.function'
   },
   {
@@ -74,7 +74,7 @@
     'name': 'constant.numeric'
   },
   {
-    'match':'\\bnil'
+    'match':'\\b(nil|this|\\@|\\#)'
     'name':'keyword'
   }
 ]
