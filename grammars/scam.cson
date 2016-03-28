@@ -3,7 +3,7 @@
 'fileTypes': ['SCM']
 'patterns': [
   {
-    'match': '\\b(println|true\\?|error\\?|print|inspect|length|string\\+|abs|null\\?|eq\\?|sqrt|reverse|is\\?|level\\?|ppTable|lambda)[ |\\n]?'
+    'match': '\\b(println|true\\?|error\\?|print|inspect|length|string\\+|abs|null\\?|eq\\?|sqrt|reverse|is\\?|level\\?|ppTable|lambda|member\\?|cadr|car|cons|caar|caddr|cdr|type)[ |\\n]?'
     'name': 'support.function'
   },
   {
