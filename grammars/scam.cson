@@ -48,11 +48,11 @@
     ]
   },
   {
-    'match': '((;).*)'
+    'match': ';[^{].*'
     'name': 'comment'
   },
   {
-    'begin': '(;{).*'
+    'begin': ';{.*'
     'end': ';}'
     'name':'comment.block'
   },
